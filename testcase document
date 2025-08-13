@@ -1,0 +1,30 @@
+
+QuickCart – Test Cases 
+
+1. Authentication
+1. Verify that a customer can successfully sign up by filling out the registration form and is redirected to the login page after account creation.
+2. Verify that an admin can successfully sign up with the admin role and access admin-specific features after login.
+3. Verify that logging in with valid credentials redirects the user to their respective dashboard.
+4. Verify that logging in with an invalid password displays an error toast message without logging the user in.
+5. Verify that a logged-in user remains logged in after refreshing the browser, with the session preserved via JWT.
+
+2. Role-Based Access
+6. Verify that a customer attempting to access the admin panel is redirected to an unauthorized page.
+7. Verify that an admin can access the "Add Product" page without restriction.
+
+3. Product Management
+8. Verify that an admin can successfully add a new product using the product form and see it in the product list immediately.
+9. Verify that an admin can edit an existing product, and the updated details are reflected in the product list.
+10. Verify that an admin can delete a product, and it no longer appears in the database or product list.
+
+4. Cart
+11. Verify that when a customer clicks "Add to Cart," the cart icon updates its count instantly.
+12. Verify that removing an item from the cart updates the cart in real-time.
+13. Verify that when an item is added to the cart on one device, the cart on another device logged into the same account updates instantly through WebSockets.
+
+5. Orders & Payment
+14. Verify that a customer can successfully complete checkout using Stripe, with a payment success message
+
+6. UI & Other
+16. Verify that toggling the dark/light mode switch changes the theme and that the selected mode persists after refreshing the browser.
+17. Verify that when an API request fails, an error toast notification is displayed to the user.
